@@ -11,9 +11,12 @@ describe('Testa funcionalidades da aplicação', () => {
       </PlanetProvider>
     );
     const searchInput = screen.getByRole("textbox");
+    const popOption = screen.getByRole('option', { name: /population/i })
     const filterBtn = screen.getByRole("button", { name: /filter/i });
 
+
     expect(searchInput).toBeInTheDocument();
+    expect(popOption).toBeInTheDocument();
     expect(filterBtn).toBeInTheDocument();
   });
 })
